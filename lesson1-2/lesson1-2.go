@@ -117,7 +117,7 @@ func Dictionary() {
 	var word string
 
 	for {
-		fmt.Println("英语单词字典：")
+		fmt.Println("\n英语单词字典：")
 		fmt.Scanln(&word)
 		request := DictRequest{TransType: "en2zh", Source: word}
 		setHttpPost(request)
@@ -253,5 +253,6 @@ func process(conn net.Conn) {
 }
 
 func main() {
-	TCPEchoServer()
+	//TCPEchoServer()
+	Dictionary()
 }
